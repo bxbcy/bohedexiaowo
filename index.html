@@ -4,59 +4,150 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>bohe</title>
-    <style>  
+    
+    <style>
       body {
         margin: 0;
+        height: 100vh;
+        background-color: rgb(198, 255, 200);
+      }
+      .yinYing {
+        box-shadow: 2px 5px 3px #888888;
+      }
+      .flex {
+        display: flex;
+      }
+      .baiSe {
+        background-color: rgb(243, 252, 253);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8{
+        margin: 8px;
+      }
+      .mgr8{
+        margin-right: 8px;
+      }
+      .mgt8{
+        margin-top: 8px;
+      }
+      .daoHang{
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color:#666;
+      }
+      .mynr{
+        text-align:center;
+        font-family:黑体;
+        font-size:16px;
+      }
+      @media(max-width:600px){
+        .ceBian{
+            display: none;
+        }
+        .neiRong{
+            flex-direction: column;
+        }
+        .shuJuQu{
+            flex-direction: column;
+        }
+        .youQU{
+            margin-left: 8px;
+        }
+        .shuJU{
+            margin:0 0 8px;
+            flex:auto;
+        }
+      }
+      .neiRong::-webkit-scrollbar{
+        display:none
       }
     </style>
   </head>
-  <body><body width: 100%;>
-    <div style="
-    background-color:rgba(33, 110, 253, 0.4);
-    width:100%;
-    text-align:center;
-    padding:40px
-    ">
-    <table ='1'>
-      <tr>
-<td><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F933b994f-2adf-4f12-b70c-5f2c3ea41fc8%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1690455888&t=090d21cc04226fa5deec3f8d4bafbb2a" width='200' height='200'
-</td>
-<td style=width:200px;><h2>   欢迎你，这里是</h2>
-<h2><b style=color:red;>山喵吃薄荷</b>的小窝</h2></td></tr></table>
-</div>
-<div style="
-background-color:#f1f1f1;
-   width:80%;
-   margin: 60px ;
-   padding: 10px;
-   line-height:1.4;
-   ">
-<p style="font-family:华文行楷;font-size:30px;">站长:山喵吃薄荷
-  <ol>
-    <li>做网站真的很有意思。</li>
-    <li>这是一种乐趣，一次游戏。</li>
-    <li>建议你也尝试创建属于自己的网站</li>
-</p>
-</div>
-<div
-<div style="
-background-color:#f1f1f1;
-   width:80%;
-   text-align:center;
-   margin: 60px ; 
-   padding: 15px;
-   line-height:0.5;">
-   <P style=color:#b1b9>更多功能</P>
-     <dr style=color:#c1b9>尽请期待 </dr>
-</div>
-<div> <div style="
-   background-color:rgba(0, 119, 255, 0.4);
-  width:106.4%;
-    text-align:center;
-    padding:20px
-    ">
-    <p>我的邮箱</p>
-    <a href="www.3162846418@QQ.com">www.3162846418@QQ.com</a>
+  <body class="flex">
+    <!-- 侧边框 -->
+    <div style="width: 180px;z-index: 2" class="baiSe yinYing">
+    <!-- 头像栏 -->
+    <div style="padding: 10px;
+    align-items: center ;
+    justify-content: center;
+    bottom: 1px solid #999;
+    border-bottom: 1px solid rgb(190, 190, 190)"
+    class="flex">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F933b994f-2adf-4f12-b70c-5f2c3ea41fc8%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1690455888&t=090d21cc04226fa5deec3f8d4bafbb2a"
+         width='80px' 
+         height='80px' 
+        style="border: 2px black;"
+        alt=""
+        >
+        <div style="
+        margin-left: 10px;
+        font-size:14px;">站长：<P style="white-space:nowrap;color:red;">山喵吃薄荷</P></div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="flex1">
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+    </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部区 -->
+      <div style="height: 80px;z-index: 1;" class="baiSe yinYing">
+        <p style="
+        text-align:center;
+        font-size: 25px;
+        font-family:黑体;"
+        >欢迎来到我的网站</p>
+    </div>
+      <!-- 内容区 -->
+      <div style="overflow:auto" class="neiRong flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuJuQu">
+            <!-- 数据块 -->
+            <div style="height: 50px"class="shuJU flex1 baiSe mgr8 yinYing">
+            <p style="color:rgb(245, 0, 180);" class="mynr">没有内容</p></div>
+            <div style="height: 50px"class="shuJU flex1 baiSe mgr8 yinYing">
+            <p style="color:rgb(154, 15, 240);" class="mynr">没有内容</p></div>
+            <div style="height: 50px"class="shuJU flex1 baiSe mgr8 yinYing">
+            <p style="color:rgb(74, 0, 245);" class="mynr">没有内容</p></div>
+            <div style="height: 50px"class="shuJU flex1 baiSe mgr8 yinYing">
+            <p style="color:rgb(0, 110, 245);" class="mynr">没有内容</p></div>
+            <div style="height: 50px"class="shuJU flex1 baiSe yinYing">
+            <p style="color:rgb(0, 245, 131);" class="mynr">没有内容</p></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px;"class="baiSe mgt8 yinYing"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youQU flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px"class="baiSe yinYing">
+            <p style="text-align: center;">未完待续</p></div>
+          <!-- 消息区 -->
+          <div style="height: 300px"class="baiSe mgt8 yinYing">
+        <p style="text-align: center;">联系方式：<b style="white-space:pre-wrap;">没有</b></p></div>
+        </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+
